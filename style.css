@@ -37,3 +37,10 @@ button{
     border-radius: 15px;
     font-weight: 800;
 }
+
+.decimal{
+    float: right;
+    margin-right: 50px;
+    font-size: 25px;
+    width: 325px;
+}

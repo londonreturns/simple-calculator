@@ -14,7 +14,22 @@ function addToScreen(event){
         clearScreen();
     }else if (userInput == "="){
         try{
-            screen.textContent = eval(screen.textContent);
+            newNumber = eval(screen.textContent);
+            newText = newNumber.toString();
+            let decimal = document.querySelector(".decimal").value;
+            if (decimal == ``){
+                decimal = 3;
+            }else{
+                decimal = parseInt(decimal);
+            }
+            clearScreen();
+            if (newText.length > 5 && newText.includes(".")){
+                screen.textContent = newText.slice(0, newText.indexOf(".") + decimal + 1);
+                console.log(newText);
+
+            }else(
+                screen.textContent += newNumber
+            )
         }catch (error){
             screen.textContent = "Syntax Error";
         }
